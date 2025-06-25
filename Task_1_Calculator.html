@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1 Calculator</title>
+    <link rel="stylesheet" href="Task_1_Calculator.css">
+    <script defer src="Task_1_Calculator.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="calculator-header">
+                <button type="button" class="theme-toggle" id="themeToggle">🌙</button>
+                <button type="button" class="help-btn" id="helpBtn">?</button>
+            </div>
+            <form>
+                <div class="display-row">
+                    <div class="display">
+                        <input type="text" name="display" id="display" readonly>
+                    </div>
+                    <button type="button" class="copy-btn" id="copyBtn" title="Copy result">📋</button>
+                </div>
+                <div class="buttons-grid">
+                    <button type="button" class="operator" data-action="clear">AC</button>
+                    <button type="button" class="operator" data-action="delete">del</button>
+                    <button type="button" class="operator" data-value="%">%</button>
+                    <button type="button" class="operator" data-value="/">/</button>
+
+                    <button type="button" class="scientific" data-action="sqrt">√</button>
+                    <button type="button" data-value="7">7</button>
+                    <button type="button" data-value="8">8</button>
+                    <button type="button" data-value="9">9</button>
+                    <button type="button" class="operator" data-value="*">*</button>
+
+                    <button type="button" class="scientific" data-action="power">x²</button>
+                    <button type="button" data-value="4">4</button>
+                    <button type="button" data-value="5">5</button>
+                    <button type="button" data-value="6">6</button>
+                    <button type="button" class="operator" data-value="-">-</button>
+
+                    <button type="button" class="scientific" data-action="reciprocal">1/x</button>
+                    <button type="button" data-value="1">1</button>
+                    <button type="button" data-value="2">2</button>
+                    <button type="button" data-value="3">3</button>
+                    <button type="button" class="operator" data-value="+">+</button>
+
+                    <button type="button" data-value="00">00</button>
+                    <button type="button" data-value="0">0</button>
+                    <button type="button" class="equal operator" data-action="calculate" style="grid-column: span 2;">=</button>
+                </div>
+            </form>
+            <div class="history-panel" id="historyPanel">
+                <h3>History</h3>
+                <div class="history-list" id="historyList"></div>
+                <button type="button" class="clear-history" id="clearHistory">Clear History</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div class="help-modal" id="helpModal">
+        <div class="help-content">
+            <span class="close-help" id="closeHelp">&times;</span>
+            <h2>Keyboard Shortcuts</h2>
+            <ul>
+                <li><strong>0-9:</strong> Number keys</li>
+                <li><strong>+ - * /:</strong> Basic operations</li>
+                <li><strong>Enter:</strong> Calculate result</li>
+                <li><strong>Backspace:</strong> Delete last character</li>
+                <li><strong>Escape:</strong> Clear all</li>
+                <li><strong>%:</strong> Percentage</li>
+                <li><strong>Ctrl+C:</strong> Copy result</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
